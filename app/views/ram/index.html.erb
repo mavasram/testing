@@ -1,0 +1,23 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ram.each do |ra| %>
+      <tr>
+        <td><%= ra.Name %></td>
+        <td><%= ra.Email %></td>
+        <td><%= ra.Gender %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

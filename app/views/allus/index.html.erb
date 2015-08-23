@@ -1,0 +1,28 @@
+<h1>Listing allus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @allus.each do |allu| %>
+      <tr>
+        <td><%= allu.Name %></td>
+        <td><%= allu.Email %></td>
+        <td><%= allu.Gender %></td>
+        <td><%= link_to 'Show', allu %></td>
+        <td><%= link_to 'Edit', edit_allu_path(allu) %></td>
+        <td><%= link_to 'Destroy', allu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Block', new_allu_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@allu) do |f| %>
+  <% if @allu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@allu.errors.count, "error") %> prohibited this allu from being saved:</h2>
+
+      <ul>
+      <% @allu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br>
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Email %><br>
+    <%= f.text_area :Email %>
+  </div>
+   <div class="field">
+    <%= f.label :Gender %><br>
+    <%= f.text_area :Gender %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
